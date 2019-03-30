@@ -15,9 +15,8 @@ function camJS(namespace){
   var context = canvas.getContext('2d');
   // Trigger photo take
   snap.addEventListener('click', function() {
-  context.drawImage(video, 0, 0, video.width,video.height);
+  context.drawImage(video, 0, 0, canvas.width, canvas.height);
   var imgAsDataURL = canvas.toDataURL();
-  var message = {image: imgAsDataURL, width: video.videoWidth, height: video.videoHeight};
-  Shiny.onInputChange(namespace+'image',message);
+  Shiny.onInputChange(namespace+'image',imgAsDataURL);
   });
 }

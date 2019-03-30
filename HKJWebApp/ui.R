@@ -37,7 +37,7 @@ videoOutput = function(id,width = '100%',height= "100%"){
                autoplay = NA
     ),
     tags$button(id = button_id,"Snap Photo"),
-    tags$canvas(id = canvas_id,width = width,height = height,style = "display:none"),
+    tags$canvas(id = canvas_id,width = 640,height = 480,style = "display:none"),
     tags$script(src = "CamJS.js")
   )
 }
@@ -48,11 +48,7 @@ prediction <- tabItem("prediction",
                       fluidRow(box(solidHeader =  TRUE,
                           width = 6,
                           collapsible = TRUE,
-                          videoOutput("test")),
-                          box(solidHeader = TRUE,
-                              width = 6,
-                              collapsible = TRUE,
-                              imageOutput("img"))
+                          videoOutput("test"))
                           )
                       )
 

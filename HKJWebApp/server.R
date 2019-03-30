@@ -3,7 +3,7 @@ library(shiny)
 getImage = function(input,output,session,
                     magick_object = FALSE,
                     returnRaw = FALSE){
-  #Function returns the image path in the 
+  #Function returns the image as a png 
   ns = session$ns
   
   runjs(paste0("camJS('",ns(""),"');"))
@@ -29,9 +29,9 @@ getImage = function(input,output,session,
   
   image = eventReactive(input$image,{
     
-    image = getImg(input$image$image,magick_object = magick_object)
+    image = getImg(input$image,magick_object = magick_object)
     
-    return(list(raw = input$image,image = image,height = input$image$height, width = input$image$width))
+    return(list(raw = input$image,image = image))
   })
   
   return(image)
@@ -40,17 +40,9 @@ getImage = function(input,output,session,
 server <- function(input,output,session){
   image = callModule(getImage,"test",magick_object = TRUE)
   
-  output$img = renderImage({
+  observe({
     req(image())
     
-    outfile <- tempfile(fileext = '.png')
-    #png::writePNG(image(),target = outfile)
-    image_write(image()$image,path = outfile,format = "png")
-    
-    list(src = outfile,
-         contentType = 'base64',
-         width = image()$width,
-         height = image()$height,
-         alt = "This is alternate text")
-  },deleteFile = TRUE)
+    image_write(image()$image,path = "test.png",format = "png")
+  })
 }
