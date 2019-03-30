@@ -26,4 +26,7 @@ Team Members
 •	Shashikant Naidu 
 •	Venkat 
 
+This above is our my work based off models developed in ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection. Their work can be found here.
+
+
 [MANDATORY] Installations & Reproduction Detailed Instructions •	To Install : https://github.com/remiconnesson/sleepy_banach/blob/master/installation/INSTALLATION.md •	To Reproduce Results : https://github.com/remiconnesson/sleepy_banach/blob/master/installation/REPRODUCIBILITY.md
