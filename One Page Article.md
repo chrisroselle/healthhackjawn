@@ -32,6 +32,10 @@ water, air, climate change, and the consequences, including skin cancer.
 The HealthHack Jawn Team has created an app that teaches children about skin cancer and allows them to help their adult family
 members to take pictures of skin lesions that may or may not be cancerous.  Feedback is provided for adults about the potential risk
 and the children can utilize emojis and other images to identify what the lesions/moles look like in their own terms.  It is a 
-fact that millions of Americans will go to the shores, mountains, or lakes for vacations in the summer.  In many cases when and
-adult is assessing a lesion, spot, or mole on their bodies, it's  
+fact that millions of Americans will go to the shores, mountains, or lakes for vacations in the summer.  In many cases when an
+adult is assessing a lesion, spot, or mole on their bodies, it's the result of what has been viewed in a mirror or what can be
+seen on their hands and body in a mirror.  People rarely know what type of lesions or spots are on their backs unless inspected
+by relatives or friends.   
+
+
 
