@@ -1,4 +1,6 @@
-HealthHackJawn [MANDATORY] Tagline Detecting Melanoma with Artificial Intelligence [MANDATORY] Summary Paragraph Skin cancer being one of the most common cancer diseases with high mortality rates, is an ideal use case for Artificial Intelligence. With Machine Learning algorithm on previously analyzed images, an application is built for quick screening and analysis for early detection of melanoma.
+HealthHackJawn - Detecting Melanoma with Artificial Intelligence 
+
+Skin cancer being one of the most common cancer diseases with high mortality rates, is an ideal use case for Artificial Intelligence. With Machine Learning algorithm on previously analyzed images, an application is built for quick screening and analysis for early detection of melanoma.
 
 There are 75 repositories and nearly 95k available code results on Github for "Skin Cancer Detection." Many of these projects are extremely useful to data scientists, physicians, and healthcare researchers, but have little utility for patients, especially given the fact that there is very low health literacy in the United States.
 
