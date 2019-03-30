@@ -1,0 +1,9 @@
+suppressPackageStartupMessages({
+  library(shiny)
+  library(shinydashboard)
+  library(shinyjs)
+  library(RCurl)
+  library(magick)
+  library(png)
+  library(tidyverse)
+})
