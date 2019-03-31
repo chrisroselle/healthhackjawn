@@ -1,4 +1,4 @@
-HealthHackJawn - Detecting Melanoma with Artificial Intelligence 
+## HealthHackJawn - Detecting Melanoma with Artificial Intelligence 
 
 Skin cancer being one of the most common cancer diseases with high mortality rates, is an ideal use case for Artificial Intelligence. With Machine Learning algorithm on previously analyzed images, an application is built for quick screening and analysis for early detection of melanoma.
 
@@ -13,20 +13,20 @@ Link to the one page article You must write a one page (or more) article detaili
 [OPTIONAL] Additional ressources: 
 Provide link(s) to additional ressource(s) you created during the 24h hackathon period and pushed in your submission repo. Anything that can help better appreicate your project is good to do. 
 
-Non-exhaustive list of ideas for additional ressources: 
-•	Case studies 
-•	Detailed analysis of the problem (e.g. cost, number of person impacted, history of the problem) 
-•	Github Page 
-•Video [MANDATORY] 
+### Non-exhaustive list of ideas for additional resources: 
+*	Case studies 
+*	Detailed analysis of the problem (e.g. cost, number of person impacted, history of the problem) 
+*	Github Page 
+* Video 
 
-Team Members 
-•	Chris Roselle 
-•	Edward Bukstel 
-•	Akash Sadashivapeth 
-•	Shashikant Naidu 
-•	Venkat 
+### Team Members 
+*	Chris Roselle 
+*	Edward Bukstel 
+*	Akash Sadashivapeth 
+*	Shashikant Naidu 
+*	Venkat 
 
-This above is our my work based off models developed in ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection. Their work can be found here.
+This above is our work based off models developed in ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection. Their work can be found here.
 
-
-[MANDATORY] Installations & Reproduction Detailed Instructions •	To Install : https://github.com/remiconnesson/sleepy_banach/blob/master/installation/INSTALLATION.md •	To Reproduce Results : https://github.com/remiconnesson/sleepy_banach/blob/master/installation/REPRODUCIBILITY.md
+### Installation Intructions
+https://github.com/chrisroselle/healthhackjawn/blob/master/installation/INSTALLATION.md
