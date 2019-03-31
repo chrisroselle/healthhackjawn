@@ -29,4 +29,4 @@ Provide link(s) to additional ressource(s) you created during the 24h hackathon 
 This above is our work based off models developed in ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection. Their work can be found here.
 
 ### Installation Intructions
-https://github.com/chrisroselle/healthhackjawn/blob/master/installation/INSTALLATION.md
+https://github.com/chrisroselle/healthhackjawn/blob/master/INSTALLATION.md
