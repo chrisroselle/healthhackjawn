@@ -12,6 +12,7 @@ suppressPackageStartupMessages({
   library(config)
   library(httr)
   library(shinycssloaders)
+  library(jsonlite)
   library(tidyverse)
 })
 

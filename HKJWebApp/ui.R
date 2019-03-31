@@ -1,5 +1,5 @@
 # Define Header--------
-header <- dashboardHeader(title = "HealthJawns")
+header <- dashboardHeader(title = "SherlockAI")
 
 #Define Sidebar -------------
 sidebar <- dashboardSidebar(width = 250,
@@ -8,12 +8,12 @@ sidebar <- dashboardSidebar(width = 250,
                               menuItem(
                                 text = "Prediction",
                                 tabName = "prediction",
-                                icon = icon('map-marker')
+                                icon = icon('bar-chart')
                               ),
                               menuItem(
                                 text = "Info",
                                 tabName = "info",
-                                icon = icon('map-marker')
+                                icon = icon('info')
                               ),
                               menuItem(
                                 text = "Map",
@@ -87,23 +87,23 @@ info <- tabItem("info",
                    "Additional Information"),
                 fluidRow(
                   moreInfo("American Cancer Society",
-                           "https://www.cancer.org/cancer/melanoma-skin-cancer/about.html",
-                           "More Information about the effect and prevention of Melanoma"),
-                  moreInfo("SkinCancer.Org",
-                           "https://www.skincancer.org/prevention/skin-cancer-and-skin-of-color-reference",
-                           "Some more Information"),
-                  moreInfo("SkinCancer.Org",
-                           "https://www.skincancer.org/prevention/skin-cancer-and-skin-of-color-reference",
-                           "Some more Information"),
-                  moreInfo("SkinCancer.Org",
-                           "https://www.skincancer.org/prevention/skin-cancer-and-skin-of-color-reference",
-                           "Some more Information"),
-                  moreInfo("SkinCancer.Org",
-                           "https://www.skincancer.org/prevention/skin-cancer-and-skin-of-color-reference",
-                           "Some more Information"),
-                  moreInfo("SkinCancer.Org",
-                           "https://www.skincancer.org/prevention/skin-cancer-and-skin-of-color-reference",
-                           "Some more Information")
+                           "https://www.cancer.org/cancer/skin-cancer/prevention-and-early-detection.html",
+                           "All you need to know about skin cancer starting from Causes, Riskfactors, Prevention to Treatment."),
+                  moreInfo("National Cancer Institute",
+                           "https://www.cancer.gov/about-cancer/treatment/clinical-trials/disease/skin-cancer/treatment",
+                           "Clinical Trials on effective ways to Detect Skin Cancer."),
+                  moreInfo("St. Jude Childrens Hospital",
+                           "https://www.stjude.org/disease/melanoma.html",
+                           "More information of the Treatment of Melanoma on Children."),
+                  moreInfo("Skin Care Foundation",
+                           "https://www.aad.org/public/diseases/bumps-and-growths/moles/moles-in-children",
+                           "Expert guides, Early Detection and Tips on Proactive Preventive Measures."),
+                  moreInfo("Center for Desiese Control and Prevention",
+                           "https://www.cdc.gov/spanish/especialescdc/cancerpiel/index.html",
+                           "Skin Protection from Cancer, Spanish artical by the CDC."),
+                  moreInfo("Science Daily",
+                           "https://www.sciencedaily.com/releases/2018/07/180705113940.htm",
+                           "Additional Research on Skin Cancer Detection Applications.")
                 )
               )
 

@@ -93,9 +93,40 @@ server <- function(input,output,session){
     lon <- input$location[["lon"]]
     lat <- input$location[["lat"]]
     
+    #make api call
+    search_results <- httr::GET("https://api.yelp.com/v3/businesses/search",
+                      config = add_headers(Authorization = paste("Bearer",credentials$yelp_key)),
+                      query = list(term = "dermatologist",
+                                   latitude = lat,
+                                   longitude = lon))
+    
+
+    search_results <- data.frame(jsonlite::fromJSON(content(search_results, type = "text")))
+    
+    if(nrow(search_results) == 0){
+      shinyalert("No Businesses Found","No Skin Care Specialists in the Area",type = "error")
+    }
+    
+    current_location <- makeAwesomeIcon(icon= 'flag', markerColor = 'red', iconColor = 'black')
+    businesses <- makeAwesomeIcon(icon = "user-md", marker = "blue", iconColor = 'black')
+    
+    labels = sprintf(
+      "Name: %s
+      <br/> Location: %s
+      <br/> Phone: %s",
+      search_results$businesses.name,
+      search_results$businesses.location$address1,
+      search_results$businesses.phone
+    )%>%
+      lapply(htmltools::HTML)
+    
     map <- leaflet()%>%
       addTiles()%>%
-      addAwesomeMarkers(lng = lon,lat = lat)
+      addAwesomeMarkers(lng = lon,lat = lat,popup = "You are Here",icon = current_location)%>%
+      addAwesomeMarkers(lng = search_results$businesses.coordinates$longitude, 
+                        lat = search_results$businesses.coordinates$latitude,
+                        popup = labels,
+                        icon = businesses)
     
     return(map)
       
