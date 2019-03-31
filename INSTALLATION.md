@@ -1,5 +1,7 @@
-## Setting up and training the model
 
+
+## Setting up and training the model
+**Unfortunately, our model did not finish training before the end of the event. As a result, this code has instead mocked the response**
 1. Clone the code for the example model
 	1. `git clone https://github.com/yuanqing811/ISIC2018`
 1. Download and stage the data for the sample model

@@ -67,13 +67,7 @@ seen on their hands and body in a mirror.  People rarely know what type of lesio
 by relatives or friends.   By initiating a gamification strategy as part of a detection regimen for skin cancer, children and grandchildren
 can learn to be active members in preventative health strategies.
 
-Team Members •	Chris Roselle •	Edward Bukstel •	Akash Sadashivapeth •	Shashikant Naidu •	Venkat
+Team Members •	Chris Roselle •	Edward Bukstel •	Akash Sadashivapeth •	Shashikant Naidu •	Venkat Rajagopal
 
-This above is our my work based off models developed in ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection. Their work can be found here.
-
-[MANDATORY] Installations & Reproduction Detailed Instructions •	
-To Install : https://github.com/remiconnesson/sleepy_banach/blob/master/installation/INSTALLATION.md •	
-To Reproduce Results:  https://github.com/remiconnesson/sleepy_banach/blob/master/installation/REPRODUCIBILITY.md
-
-
+This above is our work based off models developed in ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection. Their work can be found here: https://github.com/yuanqing811/ISIC2018/
 
