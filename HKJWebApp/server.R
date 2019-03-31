@@ -64,9 +64,46 @@ server <- function(input,output,session){
                  encode = "json")
     },error = function(e){
       shinyalert("Error","Problem Sending Data to Server",html = TRUE)
+      return(400)
     })
     
     removeModal()
+    
+    if(status_code(request) == 200){
+      happy <- c("🤗","🎉","🤩","😇","😎")
+      medium <- c("🤭","😲","😣","🤨","🤔")
+      sad <- c("💩","😰","☹️","🤒","🤮")
+
+      randNum <- sample(1:5,1)
+      
+      content <- jsonlite::fromJSON(content(request, type = "text"))
+
+      if(content$diagnosis_code %in% c("NV","BKL","DF","VASC")){
+        emoji <- happy[randNum]
+      }else if(content$diagnosis_code %in% c("IN","AKIEC")){
+        emoji <- medium[randNum]
+      }else if(content$diagnosis_code %in% c("MEL","BCC")){
+        emoji <- sad[randNum]
+      }else{
+        emoji <- "No Response Found"
+      }
+      
+      cat(content$diagnosis_code,"\n")
+      cat(content$diagnosis_detail,"\n")
+      
+      
+      showModal(modalDialog(
+        title = emoji,
+        paste(content$diagnosis_detail,content$confidence),
+        footer = NULL,
+        size = "m",
+        easyClose = TRUE
+      ))
+      
+      #shinyalert(paste0("<p style='font-size:70px;'>",emoji,"</p>"),paste(content$diagnosis_detail,content$confidence),html = TRUE)
+      
+    }
+
     
   })
   
