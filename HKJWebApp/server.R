@@ -40,9 +40,26 @@ getImage = function(input,output,session,
 server <- function(input,output,session){
   image = callModule(getImage,"test",magick_object = TRUE)
   
+  # observe({
+  #   req(image())
+  #   
+  #   image_write(image()$image,path = "test.png",format = "png")
+  # })
+  
   observe({
-    req(image())
+    req(input$key)
+    if(input$key == 97){
+      shinyalert("<p style='font-size:70px;'>💩</p>", "Oh no...",html = TRUE)
+    }else if(input$key == 98){
+      shinyalert("<p style='font-size:70px;'>🎉</p>","Hooray!",html = TRUE)
+    }
     
-    image_write(image()$image,path = "test.png",format = "png")
+    
+    card_swipe <- callModule(shinyswipr, "quote_swiper")
+    
+    observeEvent(card_swipe(),{
+      print(card_swipe) #show last swipe result. 
+    }) 
+    
   })
 }
