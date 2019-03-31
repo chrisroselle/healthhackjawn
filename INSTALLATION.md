@@ -1,4 +1,4 @@
-# Setting up and training the model
+## Setting up and training the model
 
 1. Clone the code for the example model
 	1. ```git clone https://github.com/yuanqing811/ISIC2018```
@@ -20,3 +20,19 @@
 1. Train the example model
 	1. ```python runs/cls_train.py```
 		1. This did not complete in 12 hours on our t2.large size ec2 instance
+
+
+
+## Running the python backend service
+
+```
+cd backend
+python service.py
+```
+
+
+## Running the R frontend
+
+```
+TODO
+```
