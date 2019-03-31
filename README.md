@@ -8,25 +8,28 @@ HealthHackJawn's application utilizes data and the model from the "ISIC 2018: Sk
 
 https://challenge2018.isic-archive.com/
 
-Link to the one page article You must write a one page (or more) article detailing your approach, what are you trying to solve, how your results can help make a difference. Provide a link, it must be a file in your submission github repo: (Markdown or PDF) LINK :
+### Installation Intructions
+https://github.com/chrisroselle/healthhackjawn/blob/master/INSTALLATION.md
 
-[OPTIONAL] Additional ressources: 
-Provide link(s) to additional ressource(s) you created during the 24h hackathon period and pushed in your submission repo. Anything that can help better appreicate your project is good to do. 
+### Additional resources
+https://github.com/chrisroselle/healthhackjawn/blob/master/One%20Page%20Article.md
+https://github.com/chrisroselle/healthhackjawn/blob/master/doc/HealthHack%20PPT%20Final.pdf
 
-### Non-exhaustive list of ideas for additional resources: 
-*	Case studies 
-*	Detailed analysis of the problem (e.g. cost, number of person impacted, history of the problem) 
-*	Github Page 
-* Video 
+### Live demo application
+https://sakash.shinyapps.io/hkjwebapp/ 
 
 ### Team Members 
 *	Chris Roselle 
 *	Edward Bukstel 
 *	Akash Sadashivapeth 
 *	Shashikant Naidu 
-*	Venkat 
+*	Venkat Rajagopal
 
-This above is our work based off models developed in ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection. Their work can be found here.
+This above is our work built on a model developed in ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection. Their work can be found here: https://github.com/yuanqing811/ISIC2018/
 
-### Installation Intructions
-https://github.com/chrisroselle/healthhackjawn/blob/master/INSTALLATION.md
+### Citations
+Our data was extracted from the “ISIC 2018: Skin Lesion Analysis Towards Melanoma Detection” grand challenge datasets [1][2].
+
+[1] Noel C. F. Codella, David Gutman, M. Emre Celebi, Brian Helba, Michael A. Marchetti, Stephen W. Dusza, Aadi Kalloo, Konstantinos Liopyris, Nabin Mishra, Harald Kittler, Allan Halpern: “Skin Lesion Analysis Toward Melanoma Detection: A Challenge at the 2017 International Symposium on Biomedical Imaging (ISBI), Hosted by the International Skin Imaging Collaboration (ISIC)”, 2017; arXiv:1710.05006.
+
+[2] Tschandl, P., Rosendahl, C. & Kittler, H. The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions. Sci. Data 5, 180161 doi:10.1038/sdata.2018.161 (2018).
