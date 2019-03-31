@@ -39,8 +39,8 @@ python service.py
 ### Running ShinyApp Locally
 1. Install R and RStudio
 1. Install all the packages given in `HKJWebApp/global.R`
-1. Set up YELP API key and include it in a config.yml file as shown format shown below
-1. Change your working directory to `HKJWebApp/` and run the application with `shiny::runApp(launch.browser = TRUE)`
+1. Set up YELP API key and include it in a config.yml file as shown format shown below. Pleace this file in `HKJWebApp/`
+1. On Rstudio, change your working directory to `HKJWebApp/` and run the application with `shiny::runApp(launch.browser = TRUE)`
 
 ### Sample config.yml file
 **note the additional new line after the last line is important**  
