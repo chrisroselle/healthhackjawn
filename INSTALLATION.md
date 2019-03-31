@@ -41,7 +41,7 @@ python service.py
 1. Change your working directory to `HKJWebApp/` and run the application with `shiny::runApp(launch.browser = TRUE)`
 
 ### Sample config.yml file
-**note the additional new line after the last line is important**
+**note the additional new line after the last line is important**  
 The api_endpoint should point to the python backend.
 
 ```yaml
