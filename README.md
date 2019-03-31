@@ -15,7 +15,7 @@ https://github.com/chrisroselle/healthhackjawn/blob/master/INSTALLATION.md
 https://github.com/chrisroselle/healthhackjawn/blob/master/One%20Page%20Article.md
 https://github.com/chrisroselle/healthhackjawn/blob/master/doc/HealthHack%20PPT%20Final.pdf
 
-### Live demo application
+### Live demo application (mocked response data)
 https://sakash.shinyapps.io/hkjwebapp/ 
 
 ### Team Members 
