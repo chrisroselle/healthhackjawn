@@ -16,8 +16,8 @@ sidebar <- dashboardSidebar(width = 250,
                                 icon = icon('map-marker')
                               ),
                               menuItem(
-                                text = "Game",
-                                tabName = "game",
+                                text = "Map",
+                                tabName = "map",
                                 icon = icon('map-marker')
                               )
                             ))
@@ -55,7 +55,7 @@ prediction <- tabItem("prediction",
                       useShinyalert(),
                       includeCSS("stylesheet.css"),
                       fluidRow(box(solidHeader =  TRUE,
-                          width = 6,
+                          width = 7,
                           collapsible = TRUE,
                           videoOutput("test"))
                           )
@@ -109,10 +109,11 @@ info <- tabItem("info",
 
 # Game ---------
 
-maps = tabItem("maps",
+maps = tabItem("map",
+               tags$script(src = "Location.js"),
                leafletOutput("maps")
                )
 
-body <- dashboardBody(tabItems(prediction,info,game))
+body <- dashboardBody(tabItems(prediction,info,maps))
 
 ui <- dashboardPage(title = "HealthJawns",skin = 'red',header,sidebar,body)

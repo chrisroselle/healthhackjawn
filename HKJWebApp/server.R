@@ -38,28 +38,67 @@ getImage = function(input,output,session,
 }
 
 server <- function(input,output,session){
+  runjs(paste0("getLocation();"))
+  
   image = callModule(getImage,"test",magick_object = TRUE)
   
-  # observe({
-  #   req(image())
-  #   
-  #   image_write(image()$image,path = "test.png",format = "png")
-  # })
-  
   observe({
-    req(input$key)
+    req(image())
+    
+    # fileConn <- file("output.txt")
+    # writeLines(image()$raw, fileConn)
+    # close(fileConn)
+    
+    showModal(modalDialog(
+      title = "Calculating",
+      "Processing Results!",
+      footer = NULL,
+      size = "m",
+      easyClose = TRUE
+    ))
+    
+    #Port 8080 blocked in building, works on servers
+    request <- tryCatch({
+      httr::POST(url = credentials$api_endpoint,
+                 body = list(b64_image = image()$raw),
+                 encode = "json")
+    },error = function(e){
+      shinyalert("Error","Problem Sending Data to Server",html = TRUE)
+    })
+    
+    removeModal()
+    
+  })
+  
+  observeEvent(input$key,{
     if(input$key == 97){
       shinyalert("<p style='font-size:70px;'>💩</p>", "Oh no...",html = TRUE)
     }else if(input$key == 98){
       shinyalert("<p style='font-size:70px;'>🎉</p>","Hooray!",html = TRUE)
     }
-    
-    
-    card_swipe <- callModule(shinyswipr, "quote_swiper")
-    
-    observeEvent(card_swipe(),{
-      print(card_swipe) #show last swipe result. 
-    }) 
-    
   })
+  
+  
+  card_swipe <- callModule(shinyswipr, "quote_swiper")
+  
+  observeEvent(card_swipe(),{
+    print(card_swipe()) #show last swipe result. 
+  }) 
+  
+  # Location
+  
+  output$maps <- renderLeaflet({
+    req(input$location)
+    
+    lon <- input$location[["lon"]]
+    lat <- input$location[["lat"]]
+    
+    map <- leaflet()%>%
+      addTiles()%>%
+      addAwesomeMarkers(lng = lon,lat = lat)
+    
+    return(map)
+      
+  })
+  
 }
